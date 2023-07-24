@@ -8,72 +8,73 @@ import {
 
 const ProductList = () => {
     return (
-        <div className="container mx-auto my-10">
-            <h1 className="text-center font-bold text-5xl">Product List</h1>
+        <div className="container mx-auto my-3 sm:my-10">
+            <h1 className="text-center text-main font-bold sm:text-5xl text-3xl">Premium HACD</h1>
 
-            <div className="flex flex-col mt-10 items-center">
-                <Card className="flex-row w-[90%] bg-[#fafafa] my-7">
+            <div className="flex flex-col mt-4 sm:mt-10 items-center">
+                <Card className="sm:flex-row flex-col w-[90%] bg-[#fafafa] sm:my-7 my-2">
                     <CardHeader shadow={false} floated={false} className="shrink-0 m-0 rounded-r-none">
                         <img
                             src={require('../../assets/images/aeaess-282x398.png')}
                             alt="image"
-                            className="w-64 object-cover"
+                            className="w-[100%] sm:w-64 object-cover"
                         />
                     </CardHeader>
-                    <CardBody className="p-10 bg-gray flex flex-col justify-center">
-                        <div className="flex flex-row justify-between mb-10">
-                            <Typography variant="h3" className="uppercase text-main">AEAESS # 25049</Typography>
-                            <Typography variant="h3" color="black" className="ml-auto">1BTC</Typography>
+                    <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
+                        <div className="flex flex-row justify-between mb-1 sm:mb-10">
+                            <Typography className="uppercase text-main font-bold text-sm sm:text-4xl">AEAESS # 25049</Typography>
+                            <Typography className="ml-auto text-main text-sm sm:text-4xl">1BTC</Typography>
                         </div>
                         
-                        <Typography variant="h4" color="blue-gray" className="mb-2">
+                        <Typography className="mb-0 sm:mb-2 text-main text-sm sm:text-4xl">
                             A beautiful six color only diamond with I Red Edge color and only Three Letters Name. So far only 50 six color HACD had been mined. 
                         </Typography>
                         
                     </CardBody>
                 </Card>
 
-                <Card className="flex-row w-[90%] bg-[#fafafa] my-7">
+                <Card className="sm:flex-row flex-col w-[90%] bg-[#fafafa] sm:my-7 my-2">
                     <CardHeader shadow={false} floated={false} className="shrink-0 m-0 rounded-r-none">
                         <img
                             src={require('../../assets/images/aeyaay-292x360.png')}
                             alt="image"
-                            className="w-64 object-cover"
+                            className="w-[100%] sm:w-64 object-cover"
                         />
                     </CardHeader>
-                    <CardBody className="p-10 bg-gray flex flex-col justify-center">
-                        <div className="flex flex-row justify-between mb-10">
-                            <Typography variant="h3" className="uppercase text-main">AEYAAY # 51444</Typography>
-                            <Typography variant="h3" color="black" className="ml-auto">1BTC</Typography>
+                    <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
+                        <div className="flex flex-row justify-between mb-1 sm:mb-10">
+                            <Typography className="uppercase text-main font-bold text-sm sm:text-4xl">AEYAAY # 51444</Typography>
+                            <Typography className="ml-auto text-sm text-main sm:text-4xl">1BTC</Typography>
                         </div>
                         
-                        <Typography variant="h4" color="blue-gray" className="mb-2">
-                            A beautiful six color diamond with Three Letters Name ONLY . So far only 50 six color HACD had been mined.
+                        <Typography className="text-main mb-0 sm:mb-2 text-sm sm:text-4xl">
+                        A beautiful six color diamond with Three Letters Name ONLY . So far only 50 six color HACD had been mined.
                         </Typography>
                         
                     </CardBody>
                 </Card>
 
-                <Card className="flex-row w-[90%] bg-[#fafafa] my-7">
+                <Card className="sm:flex-row flex-col w-[90%] bg-[#fafafa] sm:my-7 my-2">
                     <CardHeader shadow={false} floated={false} className="shrink-0 m-0 rounded-r-none">
                         <img
                             src={require('../../assets/images/xxmxmz-285x397.png')}
                             alt="image"
-                            className="w-64 object-cover"
+                            className="w-[100%] sm:w-64 object-cover"
                         />
                     </CardHeader>
-                    <CardBody className="p-10 bg-gray flex flex-col justify-center">
-                        <div className="flex flex-row justify-between mb-10">
-                            <Typography variant="h3" className="uppercase text-main">XXMXMZ # 44711</Typography>
-                            <Typography variant="h3" color="black" className="ml-auto">1BTC</Typography>
+                    <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
+                        <div className="flex flex-row justify-between mb-1 sm:mb-10">
+                            <Typography className="uppercase text-main text-sm font-bold sm:text-4xl">XXMXMZ # 44711</Typography>
+                            <Typography className="text-main ml-auto text-sm sm:text-4xl">1BTC</Typography>
                         </div>
                         
-                        <Typography variant="h4" color="blue-gray" className="mb-2">
-                            A beautiful six color only diamond with N Yellow Cyan Edge color and only Three Letters Name. So far only 50 six color HACD had been mined.
+                        <Typography className="text-main mb-0 sm:mb-2 text-sm sm:text-4xl">
+                        A beautiful six color only diamond with N Yellow Cyan Edge color and only Three Letters Name. So far only 50 six color HACD had been mined.
                         </Typography>
                         
                     </CardBody>
                 </Card>
+
             </div>
         </div>
     )

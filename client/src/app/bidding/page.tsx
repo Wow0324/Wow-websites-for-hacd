@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { FaTwitter, FaTelegram } from 'react-icons/fa';
 import Diamond from '../../components/bidding/Diamond';
 import BiddingTable from '../../components/bidding/BiddingTable';
 import QuoteFee from '../../components/bidding/QuoteFee';
@@ -41,7 +40,7 @@ const Bidding = () => {
     }, [number]);
     const fetchNumber = async () => {
         try {
-            const response = await axios.get('http://localhost:8001/api/diamond/createtxs');
+            const response = await axios.get('https://hacpool.com/api/diamond/createtxs');
             const result = response.data;
             setPeriod(result.period);
             setNumber(result.number);
@@ -53,7 +52,7 @@ const Bidding = () => {
     const fetchDiamondData = async () => {
         if (number) {
             try {
-                const response = await axios.get(`http://localhost:8001/api/diamond/hacd?number=${number - 1}`);
+                const response = await axios.get(`https://hacpool.com/api/diamond/hacd?number=${number - 1}`);
                 setDiamondData(response.data);
             } catch (error) {
                 console.error('Error fetching diamond data:', error);
@@ -63,7 +62,7 @@ const Bidding = () => {
     return (
         <div>
 
-            <div className='flex flex-col items-center bg-black py-20'>
+            <div className='flex flex-col items-center bg-black py-10 sm:py-20'>
                 <Diamond data={diamondData} />
 
                 <BiddingTable data={bidsData} number={number} period={period} />

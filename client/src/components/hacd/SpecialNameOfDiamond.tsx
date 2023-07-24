@@ -98,12 +98,12 @@ const SpecialNameOfDiamond = () => {
       };
       
     return (
-        <div className="container mx-auto my-10">
-            <h1 className="text-center text-main font-bold text-5xl">Special Name Of Diamond</h1>
+        <div className="container mx-auto my-4 sm:my-10">
+            <h1 className="text-center text-main font-bold text-3xl sm:text-5xl">Special Name Of Diamond</h1>
 
-            <div className="grid grid-cols-4 gap-6 my-10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 my-5 sm:gap-10 sm:my-10 mx-5">
                 {diamonds.map((item, index) => (
-                    <Card className="max-w-[16rem] overflow-hidden cursor-pointer"
+                    <Card className="overflow-hidden cursor-pointer"
                         key={index} onClick={() => openModal(item.image, index)}>
                         <CardHeader
                             floated={false}
@@ -113,8 +113,8 @@ const SpecialNameOfDiamond = () => {
                         >
                             <img src={item.image} alt={`Image ${index + 1}`} className="w-full" />
                         </CardHeader>
-                        <CardBody className="text-center py-7">
-                            <Typography variant="h3" color="blue-gray" className="mb-2 text-main font-bold">
+                        <CardBody className="text-center py-3 sm:py-7">
+                            <Typography color="blue-gray" className="mb-2 text-main font-bold text-sm sm:text-4xl">
                                 {item.name}
                             </Typography>
                         </CardBody>
