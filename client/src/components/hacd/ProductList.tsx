@@ -23,7 +23,6 @@ const ProductList = () => {
                     <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
                         <div className="flex flex-row justify-between mb-1 sm:mb-10">
                             <Typography className="uppercase text-main font-bold text-sm sm:text-4xl">AEAESS # 25049</Typography>
-                            <Typography className="ml-auto text-main text-sm sm:text-4xl">1BTC</Typography>
                         </div>
                         
                         <Typography className="mb-0 sm:mb-2 text-main text-sm sm:text-4xl">
@@ -44,7 +43,6 @@ const ProductList = () => {
                     <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
                         <div className="flex flex-row justify-between mb-1 sm:mb-10">
                             <Typography className="uppercase text-main font-bold text-sm sm:text-4xl">AEYAAY # 51444</Typography>
-                            <Typography className="ml-auto text-sm text-main sm:text-4xl">1BTC</Typography>
                         </div>
                         
                         <Typography className="text-main mb-0 sm:mb-2 text-sm sm:text-4xl">
@@ -65,7 +63,6 @@ const ProductList = () => {
                     <CardBody className="p-4 sm:p-10 bg-gray flex flex-col justify-center">
                         <div className="flex flex-row justify-between mb-1 sm:mb-10">
                             <Typography className="uppercase text-main text-sm font-bold sm:text-4xl">XXMXMZ # 44711</Typography>
-                            <Typography className="text-main ml-auto text-sm sm:text-4xl">1BTC</Typography>
                         </div>
                         
                         <Typography className="text-main mb-0 sm:mb-2 text-sm sm:text-4xl">

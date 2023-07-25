@@ -43,15 +43,15 @@ const Home = () => {
             </div>
 
             <div className='flex flex-col items-center py-10 sm:py-5 px-5'>
-                <div className='container mx-auto text-white'>
+                <div className='container mx-auto text-white text-center'>
                     <h1 className='font-bold text-2xl sm:text-4xl mb-4'>Setting up Poolworker</h1>
                     <p>Please Download Latest $HAC Pool Mining Software&nbsp;&nbsp;<a href="https://hacash.org/get_started" className="underline underline-offset-2" target="_blank">Here</a>.</p>
-                    <p>Change the IP address in poolworker.config.ini file to&nbsp; 104.217.254.247:3339</p>
+                    <p>Change the IP address in poolworker.config.ini file to&nbsp; 108.181.156.247:3339</p>
                     <p>Enter your reward address and CPU Core # in supervene Then Save It !</p>
                     <span>Run poolworker and Happy Mining $HAC !!!</span>
-                    <p>View mining status enter 104.217.254.247:3340 in your browser or click <a href="http://104.217.254.247:3340/" className="underline underline-offset-2" target="_blank">here</a>.</p>
+                    <p>View mining status enter 108.181.156.247:3340 in your browser or click <a href="http://108.181.156.247:3340/" className="underline underline-offset-2" target="_blank">here</a>.</p>
                     <br />
-                    <Link to="https://miningpoolstats.stream/hacash" className='flex flex-row font-bold text-2xl underline items-center' target="_blank">
+                    <Link to="https://miningpoolstats.stream/hacash" className='flex flex-row font-bold text-2xl underline items-center justify-center' target="_blank">
                         Mining Pool Stats
                         <div className="w-6 h-6 bg-gradient-to-b from-[#d799fc] to-[#aa26ff] rounded-full ml-2 shadow-inner border-[#aa26ff]"></div>
                     </Link><br />

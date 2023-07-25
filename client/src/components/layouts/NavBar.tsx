@@ -25,7 +25,7 @@ const NavBar = () => {
                 <Link to="https://sea.hacash.diamonds" target="_blank" className="text-secondary font-bold hover:text-nav-hover">$HACD Exchange</Link>
             </li>
             <li>
-                <Link to="/gpu" className="text-secondary font-bold hover:text-nav-hover">$GPU Pool</Link>
+                <Link to="/gpu" className="text-secondary font-bold hover:text-nav-hover">GPU Pool</Link>
             </li>
         </ul>
     );
