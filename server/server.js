@@ -1,9 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const path = require('path');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 const port = 8001;
+
+// // 👇️ "/home/john/Desktop/javascript"
+// const __dirname = path.dirname(__filename);
+
+
 app.use(cors());
 app.get('/api/diamond/createtxs', async (req, res) => {
   try {
@@ -39,6 +46,18 @@ app.get('/api/diamond/quotefee', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+app.use('/pool/table', createProxyMiddleware({
+  target: 'http://104.217.254.247:3340',
+  changeOrigin: true,
+}));
+
+
+app.use(express.static(path.join(__dirname, "./build")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./build/index.html"));
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

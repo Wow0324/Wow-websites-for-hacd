@@ -1,9 +1,9 @@
 {
   "short_name": "Hacpool",
-  "name": "Create React App Sample",
+  "name": "WoW Hacpool Websites",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "logo-dark.png",
       "type": "image/png",
       "sizes": "128x128"
     }

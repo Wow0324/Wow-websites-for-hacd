@@ -31,18 +31,18 @@ const NavBar = () => {
     );
 
     return (
-        <div className="bg-white sticky top-0 z-10">
-            <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:py-4 rounded-none shadow-none">
+        <div className="bg-black sticky top-0 z-10">
+            <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:py-4 rounded-none shadow-none bg-black border-none">
                 <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
                     <Link to="/" className="flex flex-row font-bold text-secondary text-xl sm:text-2xl hover:text-nav-hover items-center">
-                        <img src={require("../../assets/images/logo-white-121x121.jpg")} className='h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] mr-1' />
+                        <img src={require("../../assets/images/logo-dark.png")} className='h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] mr-1' />
                         Welcome To WOWPOOL
                     </Link>
                     <div className="hidden lg:block">{navList}</div>
 
                     <IconButton
                         variant="text"
-                        className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                        className="ml-auto h-6 w-6 text-white hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
                         ripple={false}
                         onClick={() => setOpenNav(!openNav)}
                     >

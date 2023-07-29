@@ -19,7 +19,6 @@ module.exports = withMT({
     },
     fontFamily: {
       sans: ['Jost', 'sans-serif'],
-      megrim: ['Megrim', 'cursive'],
       bungee: ['Bungee Shade', 'cursive'],
       dosis: ['Dosis', 'sans-serif']
     },

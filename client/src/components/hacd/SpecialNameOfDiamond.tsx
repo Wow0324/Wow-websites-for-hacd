@@ -18,36 +18,36 @@ const SpecialNameOfDiamond = () => {
 
     const diamonds = [
         {
-            name: "ZZUBBZ",
-            image: require('../../assets/images/zzubbz-506x484.jpg')
+            name: "ZKKZZZ",
+            image: require('../../assets/images/zkkzzz.png')
         },
         {
-            name: "TNNBAA",
-            image: require('../../assets/images/tnnbaa-506x473.jpg')
+            name: "TIIITI",
+            image: require('../../assets/images/tiiiti.png')
         },
         {
-            name: "XTTWWV",
-            image: require('../../assets/images/3d-506x507.png')
+            name: "VUUUVU",
+            image: require('../../assets/images/vuuuvu.png')
         },
         {
-            name: "AYYBEE",
-            image: require('../../assets/images/ayybee-506x472.jpg')
+            name: "TNNNNNB",
+            image: require('../../assets/images/tnnnnb.png')
         },
         {
-            name: "NMMMMK",
-            image: require('../../assets/images/nmmmmk-506x472.jpg')
+            name: "NUUUUM",
+            image: require('../../assets/images/nuuuum.png')
         },
         {
-            name: "ZMMYMM",
-            image: require('../../assets/images/zmmymm-506x473.jpg')
+            name: "KKKKNZ",
+            image: require('../../assets/images/kkkknz.png')
         },
         {
-            name: "TASTUS",
-            image: require('../../assets/images/tastus-506x480.jpg')
+            name: "XHSSSS",
+            image: require('../../assets/images/xhssss.png')
         },
         {
-            name: "TAXMAX",
-            image: require('../../assets/images/taxmax-506x472.jpg')
+            name: "MMMMHT",
+            image: require('../../assets/images/mmmmht.png')
         }
     ];
 
