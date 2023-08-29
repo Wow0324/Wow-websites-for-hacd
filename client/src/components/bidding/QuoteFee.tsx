@@ -11,7 +11,7 @@ const QuoteFee = () => {
     const [isLoading, setLoading] = useState<boolean>(false)
     const handleResetFee = async () => {
         setLoading(true)
-        if (txhash == "" || fee == "" || password == "") {
+        if (txhash === "" || fee === "" || password === "") {
             setLoading(false)
             toast.error("Required Input values...");
         }
@@ -19,7 +19,7 @@ const QuoteFee = () => {
             try {
                 const response = await axios.get(`https://hacpool.com/api/diamond/quotefee?txhash=${txhash}&fee=${fee}&password=${password}`)
                 const result = response.data
-                if (result.status == "ok") {
+                if (result.status === "ok") {
                     console.log("insert fee success")
                     toast.success("Insert fee success")
                     setLoading(false)

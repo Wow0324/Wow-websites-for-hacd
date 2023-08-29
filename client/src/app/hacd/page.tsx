@@ -1,9 +1,7 @@
 import React from 'react';
 import HacdCollection from '../../components/hacd/HacdCollection';
-import TopOfName from '../../components/hacd/TopOfName';
 import ProductList from '../../components/hacd/ProductList';
 import GalleryWithCollection from '../../components/hacd/GalleryWithCollection';
-import SpecialNameOfDiamond from '../../components/hacd/SpecialNameOfDiamond';
 import { Link } from 'react-router-dom';
 
 const Hacd = () => {
@@ -16,19 +14,11 @@ const Hacd = () => {
             </div>
 
             <div className='py-7 sm:py-20'>
-                <TopOfName/>
-            </div>
-
-            <div className='py-7 sm:py-20'>
-                <ProductList/>
-            </div>
-
-            <div className='py-7 sm:py-20'>
                 <GalleryWithCollection/>
             </div>
 
             <div className='py-7 sm:py-20'>
-                <SpecialNameOfDiamond/>
+                <ProductList/>
             </div>
 
             <div className='py-7 sm:py-10 bg-[#924dea]'>

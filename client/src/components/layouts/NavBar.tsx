@@ -14,15 +14,21 @@ const NavBar = () => {
     }, []);
 
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 items-center lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="mb-4 mt-2 flex flex-col gap-2 items-center lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4">
             <li>
-                <Link to="/bidding" className="text-secondary font-bold hover:text-nav-hover">$HACD Bidding</Link>
+                <Link to="/bidding" className="text-secondary font-bold hover:text-nav-hover">$HACD Fee Competition</Link>
+            </li>
+            <li>
+                <Link to="/autobidding" className="text-secondary font-bold hover:text-nav-hover">$HACD Auto Bidding</Link>
+            </li>
+            <li>
+                <Link to="/address" className="text-secondary font-bold hover:text-nav-hover">$HACD Address Analysis</Link>
+            </li>
+            <li>
+                <Link to="/report" className="text-secondary font-bold hover:text-nav-hover">$HACD eReport</Link>
             </li>
             <li>
                 <Link to="/hacd" className="text-secondary font-bold hover:text-nav-hover">$HACD Diamonds</Link>
-            </li>
-            <li>
-                <Link to="https://sea.hacash.diamonds" target="_blank" className="text-secondary font-bold hover:text-nav-hover">$HACD Exchange</Link>
             </li>
             <li>
                 <Link to="/gpu" className="text-secondary font-bold hover:text-nav-hover">GPU Pool</Link>
@@ -31,9 +37,9 @@ const NavBar = () => {
     );
 
     return (
-        <div className="bg-black sticky top-0 z-10">
-            <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:py-4 rounded-none shadow-none bg-black border-none">
-                <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+        <div className="bg-[#020038] sticky top-0 z-10">
+            <Navbar className="mx-auto py-2 px-1 lg:py-4 rounded-none shadow-none bg-[#020038] border-none">
+                <div className="container flex items-center justify-between text-blue-gray-900">
                     <Link to="/" className="flex flex-row font-bold text-secondary text-xl sm:text-2xl hover:text-nav-hover items-center">
                         <img src={require("../../assets/images/logo-dark.png")} className='h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] mr-1' />
                         Welcome To WOWPOOL

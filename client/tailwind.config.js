@@ -15,7 +15,7 @@ module.exports = withMT({
       'main': '#1012f3',
       'secondary': '#3363ff',
       'third':"#40b0bf",
-      'nav-hover': '#0030cc'
+      'nav-hover': '#bfdbfe'
     },
     fontFamily: {
       sans: ['Jost', 'sans-serif'],
@@ -25,7 +25,12 @@ module.exports = withMT({
     extend: {
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 255, 0.3)',
-      }
+      },
+      backgroundImage: {
+        'report': "url('./images/bg-report.jpg')",
+        'diamond': "url('./images/bg-4.jpg')",
+        'analysis': "url('./images/bg-1.jpg')",
+      },
     },
   },
   plugins: [],

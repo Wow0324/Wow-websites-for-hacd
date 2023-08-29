@@ -14,7 +14,7 @@ const Home = () => {
 
         const iframeDocument = iframeRef.current?.contentDocument;
         const styleElement = iframeDocument?.createElement('style');
-        if (styleElement != undefined) {
+        if (styleElement !== undefined) {
             styleElement.innerHTML = `
             body, table {
                 color: white !important;
@@ -29,14 +29,14 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='bg-back-main'>
+        <div className='bg-gradient-to-tr from-[#020038] to-[#40057d]'>
 
             <div className='mx-auto flex flex-row items-center p-7 gap-5 sm:p-20 sm:gap-10'>
                 <div className='flex-1 text-center text-white font-bold'>
-                    <h1 className='text-2xl sm:text-4xl italic'> HAC Public Mining Pool</h1>
+                    <h1 className='text-2xl sm:text-4xl italic'>Hacash Public Mining Pool</h1>
                     <h1 className='text-2xl sm:text-4xl sm:mb-6 mb-3 italic'> 0% Fee For HAC Miner</h1>
-                    <p className='text-xl sm:text-2xl italic'>WOWPOOL made for everyone free to mine $HAC. wowpool hosted on high speed server.</p>
-                    <p className='text-xl sm:text-2xl italic'>wowpool has 99.99% uptime and live stats reporting.</p>
+                    <p className='text-xl sm:text-2xl italic'>WoW_Pool hosted on high speed server.</p>
+                    <p className='text-xl sm:text-2xl italic'>99.99% uptime and live stats reporting.</p>
 
                 </div>
 
@@ -52,14 +52,14 @@ const Home = () => {
                     <p>View mining status enter 108.181.156.247:3340 in your browser or click <a href="http://108.181.156.247:3340/" className="underline underline-offset-2" target="_blank">here</a>.</p>
                     <br />
                     <Link to="https://miningpoolstats.stream/hacash" className='flex flex-row font-bold text-2xl underline items-center justify-center' target="_blank">
-                        Mining Pool Stats
+                        Hacash MiningPool Stats
                         <div className="w-6 h-6 bg-gradient-to-b from-[#d799fc] to-[#aa26ff] rounded-full ml-2 shadow-inner border-[#aa26ff]"></div>
                     </Link><br />
                 </div>
             </div>
 
             <div className='container mx-auto flex flex-col items-center p-5'>
-                <h1 className="text-center text-white font-bold text-2xl mb-5 sm:text-4xl sm:mb-10">WoW Pool Table</h1>
+                <h1 className="text-center text-white font-bold text-2xl mb-5 sm:text-4xl sm:mb-10">WoW_Pool Live Table</h1>
                 <iframe
                     ref={iframeRef}
                     id="my-iframe"
@@ -74,12 +74,12 @@ const Home = () => {
             <div className='container mx-auto text-center py-10 sm:py-5'>
                 <h1 className='text-2xl mt-2 sm:mt-5 sm:text-4xl sm:mt-10 text-white'> Follow us!</h1>
                 <div className='flex flex-row justify-center mt-5 gap-5 sm:mt-2'>
-                    <a href="https://twitter.com/HacashWorld?s=20" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/@HacWowpool" target="_blank" rel="noopener noreferrer">
                         <FaTwitter className="w-16 h-16 bg-white text-main rounded-full p-3" />
                     </a>
 
                     <a href="https://t.me/hacashhacd" target="_blank" rel="noopener noreferrer">
-                        <FaTelegram className="w-16 h-16 text-white rounded-full" />
+                        <FaTelegram className="w-16 h-16 bg-main text-white rounded-full" />
                     </a>
                 </div>
             </div>
