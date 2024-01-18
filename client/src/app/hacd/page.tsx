@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Hacd = () => {
 
-    // bg-[url('./images/background3.jpg')]
     return (
-        <div className='bg-black'>
+        <div className='bg-gradient-to-tr from-[#020038] to-[#40057d]'>
             <div className="py-7 sm:py-20">
                 <HacdCollection />
             </div>

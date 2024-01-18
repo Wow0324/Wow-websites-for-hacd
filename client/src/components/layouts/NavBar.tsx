@@ -9,30 +9,47 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     const [openNav, setOpenNav] = useState(false);
 
+    const closeNavbar = () => {
+        setOpenNav(false);
+    };
+
     useEffect(() => {
         window.addEventListener("resize", () => window.innerWidth >= 960 && setOpenNav(false));
     }, []);
 
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 items-center lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4">
-            <li>
-                <Link to="/bidding" className="text-secondary font-bold hover:text-nav-hover">$HACD Fee Competition</Link>
+        <ul className="mb-4 mt-2 flex flex-col gap-2 items-center lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-12 text-[16px]">
+            {/* <li>
+                <Link to="/wow_pool" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>WoW_II Pool</Link>
+            </li> */}
+            {/* <li>
+                <Link to="/wow_pool888" className="text-[#fdca06] font-bold hover:text-[#cfa606]" onClick={closeNavbar}>WoW_888 Pool</Link>
             </li>
             <li>
-                <Link to="/autobidding" className="text-secondary font-bold hover:text-nav-hover">$HACD Auto Bidding</Link>
+                <Link to="/wow_pool50k" className="text-[#fdca06] font-bold hover:text-[#cfa606]" onClick={closeNavbar}>WoW_50K Pool</Link>
+            </li> */}
+            <li>
+                <Link to="/bidding" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>Fee Competition</Link>
+            </li>
+
+            <li>
+                <Link to="/address" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>$HACD Address Analysis</Link>
+            </li>
+            {/* <li>
+                <Link to="/keywords" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>$HACD Keywords</Link>
+            </li> */}
+            <li>
+                <Link to="/autobidding" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>Auto Bidding</Link>
             </li>
             <li>
-                <Link to="/address" className="text-secondary font-bold hover:text-nav-hover">$HACD Address Analysis</Link>
+                <Link to="/report" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>$HACD eReport</Link>
             </li>
             <li>
-                <Link to="/report" className="text-secondary font-bold hover:text-nav-hover">$HACD eReport</Link>
+                <Link to="/hacd" className="text-secondary font-bold hover:text-nav-hover" onClick={closeNavbar}>$HACD Diamonds</Link>
             </li>
-            <li>
-                <Link to="/hacd" className="text-secondary font-bold hover:text-nav-hover">$HACD Diamonds</Link>
-            </li>
-            <li>
+            {/* <li>
                 <Link to="/gpu" className="text-secondary font-bold hover:text-nav-hover">GPU Pool</Link>
-            </li>
+            </li> */}
         </ul>
     );
 
@@ -41,8 +58,8 @@ const NavBar = () => {
             <Navbar className="mx-auto py-2 px-1 lg:py-4 rounded-none shadow-none bg-[#020038] border-none">
                 <div className="container flex items-center justify-between text-blue-gray-900">
                     <Link to="/" className="flex flex-row font-bold text-secondary text-xl sm:text-2xl hover:text-nav-hover items-center">
-                        <img src={require("../../assets/images/logo-dark.png")} className='h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] mr-1' />
-                        Welcome To WOWPOOL
+                        <img src={require("../../assets/images/logo-dark.png")} className='h-[40px] w-[40px] sm:h-[60px] sm:w-[60px] mr-1 lg:mr-2' />
+                        WoWPool
                     </Link>
                     <div className="hidden lg:block">{navList}</div>
 

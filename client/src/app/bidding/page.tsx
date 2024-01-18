@@ -42,6 +42,7 @@ const Bidding = () => {
         try {
             const response = await axios.get('https://hacpool.com/api/diamond/createtxs');
             const result = response.data;
+            console.log(result);
             setPeriod(result.period);
             setNumber(result.number);
             setBidsData(result.datas);
@@ -53,7 +54,10 @@ const Bidding = () => {
         if (number) {
             try {
                 const response = await axios.get(`https://hacpool.com/api/diamond/hacd?number=${number - 1}`);
-                setDiamondData(response.data);
+                const result = response.data;
+                const diamonds = result.list;
+                const response1 = await axios.get(`https://hacpool.com/api/diamond/scan?name=${diamonds[0].name}`);
+                setDiamondData(response1.data);
             } catch (error) {
                 console.error('Error fetching diamond data:', error);
             }
@@ -62,7 +66,7 @@ const Bidding = () => {
     return (
         <div>
 
-            <div className='flex flex-col items-center bg-black py-10 sm:py-20'>
+            <div className='flex flex-col items-center bg-gradient-to-tr from-[#020038] to-[#40057d] py-10 sm:py-20'>
                 <Diamond data={diamondData} />
 
                 <BiddingTable data={bidsData} number={number} period={period} />

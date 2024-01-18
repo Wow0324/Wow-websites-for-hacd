@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaTwitter, FaTelegram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Pool50K = () => {
     const iframeRef = useRef<HTMLIFrameElement>(null);
     const [iframeHeight, setIframeHeight] = useState<number>(0);
 
@@ -26,10 +26,11 @@ const Home = () => {
 
     useEffect(() => {
         updateIframeHeight();
+
         // Update iframe src every 5 seconds
         const interval = setInterval(() => {
-            const newSrc = "/pool/table"; // Replace with your desired new src
-            if (iframeRef.current !== null ) iframeRef.current.src = newSrc;
+            const newSrc = "/pool/wow_50k"; // Replace with your desired new src
+            if (iframeRef.current !== null) iframeRef.current.src = newSrc;
         }, 30000);
 
         return () => {
@@ -44,7 +45,7 @@ const Home = () => {
                 <div className='flex-1 text-center text-white font-bold'>
                     <h1 className='text-2xl sm:text-4xl italic'>Hacash Public Mining Pool</h1>
                     <h1 className='text-2xl sm:text-4xl sm:mb-6 mb-3 italic'> 0% Fee For HAC Miner</h1>
-                    <p className='text-xl sm:text-2xl italic'>WoW_Pool hosted on high speed server.</p>
+                    <p className='text-xl sm:text-2xl italic'>WoW_50K hosted on high speed server.</p>
                     <p className='text-xl sm:text-2xl italic'>99.99% uptime and live stats reporting.</p>
 
                 </div>
@@ -55,10 +56,10 @@ const Home = () => {
                 <div className='container mx-auto text-white text-center'>
                     <h1 className='font-bold text-2xl sm:text-4xl mb-4'>Setting up Poolworker</h1>
                     <p>Please Download Latest $HAC Pool Mining Software&nbsp;&nbsp;<a href="https://hacash.org/get_started" className="underline underline-offset-2" target="_blank">Here</a>.</p>
-                    <p>Change the IP address in poolworker.config.ini file to&nbsp; 108.181.156.247:3339</p>
+                    <p>Change the IP address in poolworker.config.ini file to&nbsp; 74.208.62.33:3339</p>
                     <p>Enter your reward address and CPU Core # in supervene Then Save It !</p>
                     <span>Run poolworker and Happy Mining $HAC !!!</span>
-                    <p>View mining status enter 108.181.156.247:3340 in your browser or click <a href="http://108.181.156.247:3340/" className="underline underline-offset-2" target="_blank">here</a>.</p>
+                    <p>View mining status enter 74.208.62.33:3340 in your browser or click <a href="http://74.208.62.33:3340/" className="underline underline-offset-2" target="_blank">here</a>.</p>
                     <br />
                     <Link to="https://miningpoolstats.stream/hacash" className='flex flex-row font-bold text-2xl underline items-center justify-center' target="_blank">
                         Hacash MiningPool Stats
@@ -68,11 +69,11 @@ const Home = () => {
             </div>
 
             <div className='container mx-auto flex flex-col items-center p-5'>
-                <h1 className="text-center text-white font-bold text-2xl mb-5 sm:text-4xl sm:mb-10">WoW_Pool Live Table</h1>
+                <h1 className="text-center text-white font-bold text-2xl mb-5 sm:text-4xl sm:mb-10">WoW_50K Live Table</h1>
                 <iframe
                     ref={iframeRef}
                     id="my-iframe"
-                    src="/pool/table"
+                    src="/pool/wow_50k"
                     title="HAC pool table"
                     className="w-full h-full"
                     style={{ height: `${iframeHeight}px` }}
@@ -97,4 +98,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Pool50K;

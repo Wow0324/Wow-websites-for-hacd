@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {
-    Typography,
     Button, Input, Spinner
 } from "@material-tailwind/react";
 import axios from "axios";
@@ -63,9 +62,6 @@ const Diamonds = () => {
                 setMobileWidth(90);
           };
 
-          // Initial mobile width value
-            //setMobileWidth(400);
-      
           // Add event listener to update the mobile width on window resize
           window.addEventListener('resize', handleResize);
 
@@ -145,7 +141,6 @@ const Diamonds = () => {
     const handleDownloadCertificate = (filename: string) => {
        
         const table: HTMLElement | null = document.getElementById('certificate-element');
-        // const table1: HTMLElement | null = document.getElementById('certificate-element1');
         if(table != null){
             toPng(table, { cacheBust: false })
             .then((dataUrl) => {
@@ -161,7 +156,7 @@ const Diamonds = () => {
     }
 
     return (
-        <div className="flex min-h-screen flex-col items-center bg-diamond bg-cover py-10 sm:py-20">
+        <div className="flex min-h-screen flex-col items-center bg-gradient-to-tr from-[#020038] to-[#40057d] py-10 sm:py-20">
           <div className='container sm:mx-auto rounded-lg p-4 sm:p-10 text-center bg-gradient-to-r from-[#1d1e30] to-[#11131f]'>
                 
                 <div className={`flex flex-row justify-center ${isLoading ? 'visible' : 'invisible'}`}>

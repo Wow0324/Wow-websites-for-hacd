@@ -8,8 +8,8 @@ import {
 
 const GalleryWithCollection = () => {
     return (
-        <div className="container mx-auto my-4 sm:my-10">
-            <h1 className="text-center text-main font-bold text-3xl sm:text-5xl">HACD Set Collection</h1>
+        <div className="container mx-auto my-4 sm:my-4">
+            <h1 className="text-center text-white font-bold text-3xl sm:text-5xl">HACD Set Collection</h1>
             <div className="flex flex-row justify-center gap-5 m-5 sm:gap-20 sm:mt-20">
                 <Card className="w-[16rem] sm:w-[36rem] overflow-hidden hover:scale-110">
                     <CardHeader

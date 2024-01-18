@@ -29,7 +29,7 @@ app.get('/api/diamond/createtxs', async (req, res) => {
 app.get('/api/diamond/hacd', async (req, res) => {
   try {
     const { number } = req.query;
-    const response = await axios.get(`https://hacd.art/api/index/hacd?number=${number}`);
+    const response = await axios.get(`http://54.193.49.59:3338/query?action=getdiamondvisualgenelist&start_number=${number}&limit=1`);
     const data = response.data;
     res.json(data);
   } catch (error) {
@@ -77,8 +77,36 @@ app.get('/api/diamond/account_diamonds', async (req, res) => {
   }
 });
 
+//get diamond lists by limits
+app.get('/api/diamond/list', async (req, res) => {
+  try {
+    const { number } = req.query;
+    const response = await axios.get(`http://54.193.49.59:3338/query?action=getdiamondvisualgenelist&start_number=${number}&limit=50`);
+    const data = response.data;
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 app.use('/pool/table', createProxyMiddleware({
   target: 'http://108.181.156.247:3340/',
+  changeOrigin: true,
+}));
+
+app.use('/pool/table_2', createProxyMiddleware({
+  target: 'http://209.105.243.206:3340/',
+  changeOrigin: true,
+}));
+
+app.use('/pool/wow_888', createProxyMiddleware({
+  target: 'http://74.208.189.43:3340/',
+  changeOrigin: true,
+}));
+
+app.use('/pool/wow_50k', createProxyMiddleware({
+  target: 'http://74.208.62.33:3340/',
   changeOrigin: true,
 }));
 
@@ -95,7 +123,7 @@ app.get('/download/keywords', (req, res) => {
 
 app.use(express.static(path.join(__dirname, "./build")));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./build/index.html"));
+  res.sendFile(path.join(__dirname, "./build/index.html"));
 });
 
 
